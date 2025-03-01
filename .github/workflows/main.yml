@@ -15,12 +15,11 @@ jobs:
         user: 'labuser'
         pass: 'Nuvelabs123$'
         port: 22
-        connect_timeout: 10s   
+        connect_timeout: 60s   
         scp: |
           './target/*war' => /tmp/
         last_ssh: |
           ls -lart /temp
-
     - name: Invoke Jenkins Deployment Job
       uses: appleboy/jenkins-action@master
       with:
