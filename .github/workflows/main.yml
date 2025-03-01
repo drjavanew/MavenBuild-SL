@@ -27,5 +27,5 @@ jobs:
       with:
         url: "http://13.235.134.109:8080"
         user: "admin"
-        token: "githubaction"
+        token: "11c32aa292d7643c10e46d64b3b16c53ad"
         job: 'Test_GitHubActions_job'
