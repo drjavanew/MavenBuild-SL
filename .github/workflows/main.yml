@@ -27,5 +27,5 @@ jobs:
       with:
         url: "http://172-31-42-56:8080"
         user: "admin"
-        pass: "Root123$"
+        password: "Root123$"
         job: 'Test_GitHubActions_job'
