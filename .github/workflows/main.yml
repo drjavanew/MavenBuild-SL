@@ -16,10 +16,12 @@ jobs:
         pass: 'Nuvelabs123$'
         port: 22
         connect_timeout: 60s   
+        first_ssh: |
+          sudo chmod 777 /var/lib/tomcat9/webapps
         scp: |
-          './target/*war' => /tmp/
+          './target/*war' => /var/lib/tomcat9/webapps
         last_ssh: |
-          ls -lart /temp
+          sudo systemctl restart tomcat9
     - name: Invoke Jenkins Deployment Job
       uses: appleboy/jenkins-action@master
       with:
