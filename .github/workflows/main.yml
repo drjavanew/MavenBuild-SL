@@ -25,7 +25,7 @@ jobs:
     - name: Invoke Jenkins Deployment Job
       uses: appleboy/jenkins-action@master
       with:
-        url: "http://172-31-42-56:8080"
+        url: "http://13.235.134.109:8080"
         user: "admin"
         token: "githubaction"
         job: 'Test_GitHubActions_job'
