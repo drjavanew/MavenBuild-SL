@@ -25,7 +25,7 @@ jobs:
     - name: Invoke Jenkins Deployment Job
       uses: appleboy/jenkins-action@master
       with:
-        host: "http://172-31-42-56:8080"
-        user: "admin"
-        pass: ${{ secrets.JENKINS_TOKEN }}
-        job: "Test_GitHubActions_job"
+        host: 'http://172-31-42-56:8080'
+        user: 'admin'
+        pass: 'Root123$'
+        job: 'Test_GitHubActions_job'
