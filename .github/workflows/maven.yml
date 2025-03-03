@@ -1,3 +1,6 @@
+name: CICD using Maven and tomcat
+on:
+ push:  # run when there is commit to repo
  workflow_dispatch:  # run manually
 jobs:
  CICDjob:
@@ -8,11 +11,11 @@ jobs:
     - name: Connect to Lab machine and Deploy the code on tomcat9 
       uses: cross-the-world/ssh-scp-ssh-pipelines@latest
       with:
-        host: ${{ secrets.HOST }}
-        user: ${{ secrets.USERNAME }}
-        pass: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        connect_timeout: 20s   
+        host: '13.235.134.109'
+        user: 'labuser'
+        pass: 'Nuvelabs123$'
+        port: 22
+        connect_timeout: 60s   
         first_ssh: |
           sudo chmod 777 /var/lib/tomcat9/webapps
         scp: |
