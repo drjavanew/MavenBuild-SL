@@ -11,7 +11,7 @@ jobs:
         host: ${{ secrets.HOST }}
         user: ${{ secrets.USERNAME }}
         pass: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORTS }}
+        port: ${{ secrets.PORT }}
         connect_timeout: 60s   
         first_ssh: |
           sudo chmod 777 /var/lib/tomcat9/webapps
